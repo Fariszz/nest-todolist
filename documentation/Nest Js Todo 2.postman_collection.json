@@ -1,0 +1,1249 @@
+{
+	"info": {
+		"_postman_id": "7f596510-f643-49ce-a3c2-3e296d8f9215",
+		"name": "Nest Js Todo 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Test\",\r\n    \"email\": \"test@mail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/auth/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Test\",\r\n    \"email\": \"test@mail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/auth/register",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "65"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"41-raAJsu4VJ7DDPqqudzWk7wJAdpM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 18 Feb 2023 04:40:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"Test\",\n    \"email\": \"test@mail.com\",\n    \"lastLoginAt\": null,\n    \"id\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"test@mail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"test@mail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/auth/login",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "169"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a9-L9vwG6WDjPnljMyOL7hQ+mXePHI\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 18 Feb 2023 07:55:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QG1haWwuY29tIiwiaWF0IjoxNjc2NzA2OTQzLCJleHAiOjE3MDgyNDI5NDN9.B0qy6N1Tmt6Q6j9yslTVGK7yLkx3Jj7IH2QNoFu3PDY"
+						}
+					]
+				},
+				{
+					"name": "Refresh Token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QG1haWwuY29tIiwiaWF0IjoxNjc2NzA2OTQzLCJleHAiOjE3MDgyNDI5NDN9.B0qy6N1Tmt6Q6j9yslTVGK7yLkx3Jj7IH2QNoFu3PDY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"test@mail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/auth/refresh",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"refresh"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Refresh Token",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"test@mail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/auth/refresh",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"refresh"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "169"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a9-8WAVdIuvhtzSn6iqF2UCW01tJB4\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 18 Feb 2023 07:56:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QG1haWwuY29tIiwiaWF0IjoxNjc2NzA2OTk5LCJleHAiOjE3MDgyNDI5OTl9.9WRDBDdvs_P4kv3Pcjl92BZi-7Jn7m36p99Bz7AeBOo"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QG1haWwuY29tIiwiaWF0IjoxNjc2NzA2OTk5LCJleHAiOjE3MDgyNDI5OTl9.9WRDBDdvs_P4kv3Pcjl92BZi-7Jn7m36p99Bz7AeBOo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/user/profile",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Profile",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/user/profile",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"profile"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "161"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a1-0KkwZTqwaf7oYCqMj8fmkSBVHyo\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 18 Feb 2023 08:04:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"email\": \"test@mail.com\",\n    \"password\": \"$2a$10$5CneZD8dnwL7HS6VrhIfnuWJ8BTT3ObC1CLs7F9dWyeumXpPnHAWK\",\n    \"name\": \"Test\",\n    \"lastLoginAt\": \"2023-02-18T07:56:39.767Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QG1haWwuY29tIiwiaWF0IjoxNjc2NzA2OTk5LCJleHAiOjE3MDgyNDI5OTl9.9WRDBDdvs_P4kv3Pcjl92BZi-7Jn7m36p99Bz7AeBOo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"test update\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/user/name",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"name"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Profile",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"test update\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/user/name",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"name"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "94"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5e-VNl1MaA1EfDPyVnUQMzPrJgfacA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 18 Feb 2023 08:08:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"email\": \"test@mail.com\",\n    \"name\": \"test update\",\n    \"lastLoginAt\": \"2023-02-18T07:56:39.767Z\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Todo",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QG1haWwuY29tIiwiaWF0IjoxNjc2NzA2OTk5LCJleHAiOjE3MDgyNDI5OTl9.9WRDBDdvs_P4kv3Pcjl92BZi-7Jn7m36p99Bz7AeBOo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"todo-1\",\r\n    \"description\": \"description 1\",\r\n    \"completed\": true,\r\n    \"userId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/todo",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"todo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QG1haWwuY29tIiwiaWF0IjoxNjc2NzA2OTk5LCJleHAiOjE3MDgyNDI5OTl9.9WRDBDdvs_P4kv3Pcjl92BZi-7Jn7m36p99Bz7AeBOo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/todo",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"todo"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetAll",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/todo",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"todo"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "474"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1da-SXTLFhhcDNL0Frm/b4JDHr6g6/k\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 18 Feb 2023 08:35:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"status\": \"success\",\n    \"message\": \"Todo fetched successfully\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"todo-1\",\n            \"description\": \"description 1\",\n            \"completed\": true,\n            \"due_time\": null,\n            \"userId\": 1,\n            \"created_at\": \"2023-02-18T08:14:11.157Z\",\n            \"updated_at\": \"2023-02-18T08:14:11.157Z\",\n            \"deleted_at\": null\n        },\n        {\n            \"id\": 2,\n            \"title\": \"todo-1\",\n            \"description\": \"description 1\",\n            \"completed\": true,\n            \"due_time\": null,\n            \"userId\": 1,\n            \"created_at\": \"2023-02-18T08:16:55.642Z\",\n            \"updated_at\": \"2023-02-18T08:16:55.642Z\",\n            \"deleted_at\": null\n        }\n    ]\n}"
+						},
+						{
+							"name": "FIlter by tag",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/todo?tag=tugas",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"todo"
+									],
+									"query": [
+										{
+											"key": "completed",
+											"value": "true",
+											"disabled": true
+										},
+										{
+											"key": "tag",
+											"value": "tugas"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "728"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2d8-qOYEjF3R2kAKXJ8Eh5V3FI338UQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 18 Feb 2023 13:45:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"status\": \"success\",\n    \"message\": \"Todo fetched successfully\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"todo-1 update\",\n            \"description\": \"description 1\",\n            \"completed\": true,\n            \"due_time\": null,\n            \"userId\": 1,\n            \"created_at\": \"2023-02-18T08:14:11.157Z\",\n            \"updated_at\": \"2023-02-18T08:38:04.075Z\",\n            \"deleted_at\": null,\n            \"todoTags\": [\n                {\n                    \"id\": 1,\n                    \"todoId\": 1,\n                    \"tagId\": 1,\n                    \"created_at\": \"2023-02-18T09:42:23.411Z\",\n                    \"updated_at\": \"2023-02-18T09:42:23.411Z\",\n                    \"deleted_at\": null,\n                    \"tag\": {\n                        \"id\": 1,\n                        \"name\": \"tugas\",\n                        \"created_at\": \"2023-02-18T09:28:13.517Z\",\n                        \"updated_at\": \"2023-02-18T09:28:13.517Z\",\n                        \"deleted_at\": null\n                    }\n                }\n            ],\n            \"user\": {\n                \"id\": 1,\n                \"email\": \"test@mail.com\",\n                \"password\": \"$2a$10$5CneZD8dnwL7HS6VrhIfnuWJ8BTT3ObC1CLs7F9dWyeumXpPnHAWK\",\n                \"name\": \"test update\",\n                \"lastLoginAt\": \"2023-02-18T07:56:39.767Z\"\n            }\n        }\n    ]\n}"
+						},
+						{
+							"name": "filter true",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/todo?completed=true",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"todo"
+									],
+									"query": [
+										{
+											"key": "completed",
+											"value": "true"
+										},
+										{
+											"key": "tag",
+											"value": "tugas 2",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1248"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4e0-UBxjBEHPocHxldmBzEXZuea0lhI\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Feb 2023 06:06:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"status\": \"success\",\n    \"message\": \"Todo fetched successfully\",\n    \"data\": [\n        {\n            \"id\": 3,\n            \"title\": \"todo-1 gamari 2\",\n            \"description\": \"description 1\",\n            \"completed\": true,\n            \"due_time\": null,\n            \"userId\": 1,\n            \"created_at\": \"2023-02-19T04:48:24.162Z\",\n            \"updated_at\": \"2023-02-19T04:48:24.162Z\",\n            \"deleted_at\": null,\n            \"todoTags\": [],\n            \"user\": {\n                \"id\": 1,\n                \"email\": \"test@mail.com\",\n                \"password\": \"$2a$10$E.xPGoJ31qVc5ZQ.X8twO.mnvXoDHIAUPX8vPqvnQM3vt9IM.OkQ.\",\n                \"name\": \"Test\",\n                \"lastLoginAt\": \"2023-02-19T04:48:02.709Z\"\n            }\n        },\n        {\n            \"id\": 4,\n            \"title\": \"todo-1 gamari 4\",\n            \"description\": \"description 1\",\n            \"completed\": true,\n            \"due_time\": null,\n            \"userId\": 1,\n            \"created_at\": \"2023-02-19T05:08:54.033Z\",\n            \"updated_at\": \"2023-02-19T05:08:54.033Z\",\n            \"deleted_at\": null,\n            \"todoTags\": [],\n            \"user\": {\n                \"id\": 1,\n                \"email\": \"test@mail.com\",\n                \"password\": \"$2a$10$E.xPGoJ31qVc5ZQ.X8twO.mnvXoDHIAUPX8vPqvnQM3vt9IM.OkQ.\",\n                \"name\": \"Test\",\n                \"lastLoginAt\": \"2023-02-19T04:48:02.709Z\"\n            }\n        },\n        {\n            \"id\": 5,\n            \"title\": \"todo-1 gamari 5\",\n            \"description\": \"description 1\",\n            \"completed\": true,\n            \"due_time\": null,\n            \"userId\": 1,\n            \"created_at\": \"2023-02-19T05:09:04.751Z\",\n            \"updated_at\": \"2023-02-19T05:09:04.751Z\",\n            \"deleted_at\": null,\n            \"todoTags\": [],\n            \"user\": {\n                \"id\": 1,\n                \"email\": \"test@mail.com\",\n                \"password\": \"$2a$10$E.xPGoJ31qVc5ZQ.X8twO.mnvXoDHIAUPX8vPqvnQM3vt9IM.OkQ.\",\n                \"name\": \"Test\",\n                \"lastLoginAt\": \"2023-02-19T04:48:02.709Z\"\n            }\n        }\n    ]\n}"
+						},
+						{
+							"name": "filter false",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/todo?completed=false",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"todo"
+									],
+									"query": [
+										{
+											"key": "completed",
+											"value": "false"
+										},
+										{
+											"key": "tag",
+											"value": "tugas 2",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1632"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"660-9bpWtg6Xv0n1t4A307oYTLXttbo\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Feb 2023 06:06:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"status\": \"success\",\n    \"message\": \"Todo fetched successfully\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"todo-1 gamari 2\",\n            \"description\": \"description 1\",\n            \"completed\": false,\n            \"due_time\": null,\n            \"userId\": 1,\n            \"created_at\": \"2023-02-19T04:48:17.931Z\",\n            \"updated_at\": \"2023-02-19T04:48:17.931Z\",\n            \"deleted_at\": null,\n            \"todoTags\": [\n                {\n                    \"id\": 1,\n                    \"todoId\": 1,\n                    \"tagId\": 2,\n                    \"created_at\": \"2023-02-19T05:01:09.717Z\",\n                    \"updated_at\": \"2023-02-19T05:01:09.717Z\",\n                    \"deleted_at\": null,\n                    \"tag\": {\n                        \"id\": 2,\n                        \"name\": \"tugas 1\",\n                        \"created_at\": \"2023-02-19T05:00:21.370Z\",\n                        \"updated_at\": \"2023-02-19T05:00:21.370Z\",\n                        \"deleted_at\": null\n                    }\n                }\n            ],\n            \"user\": {\n                \"id\": 1,\n                \"email\": \"test@mail.com\",\n                \"password\": \"$2a$10$E.xPGoJ31qVc5ZQ.X8twO.mnvXoDHIAUPX8vPqvnQM3vt9IM.OkQ.\",\n                \"name\": \"Test\",\n                \"lastLoginAt\": \"2023-02-19T04:48:02.709Z\"\n            }\n        },\n        {\n            \"id\": 2,\n            \"title\": \"todo-1 gamari 2\",\n            \"description\": \"description 1\",\n            \"completed\": false,\n            \"due_time\": null,\n            \"userId\": 1,\n            \"created_at\": \"2023-02-19T04:48:19.848Z\",\n            \"updated_at\": \"2023-02-19T04:48:19.848Z\",\n            \"deleted_at\": null,\n            \"todoTags\": [\n                {\n                    \"id\": 2,\n                    \"todoId\": 2,\n                    \"tagId\": 1,\n                    \"created_at\": \"2023-02-19T05:01:21.075Z\",\n                    \"updated_at\": \"2023-02-19T05:01:21.075Z\",\n                    \"deleted_at\": null,\n                    \"tag\": {\n                        \"id\": 1,\n                        \"name\": \"tugas 2\",\n                        \"created_at\": \"2023-02-19T05:00:13.779Z\",\n                        \"updated_at\": \"2023-02-19T05:00:13.779Z\",\n                        \"deleted_at\": null\n                    }\n                },\n                {\n                    \"id\": 3,\n                    \"todoId\": 2,\n                    \"tagId\": 2,\n                    \"created_at\": \"2023-02-19T05:01:25.778Z\",\n                    \"updated_at\": \"2023-02-19T05:01:25.778Z\",\n                    \"deleted_at\": null,\n                    \"tag\": {\n                        \"id\": 2,\n                        \"name\": \"tugas 1\",\n                        \"created_at\": \"2023-02-19T05:00:21.370Z\",\n                        \"updated_at\": \"2023-02-19T05:00:21.370Z\",\n                        \"deleted_at\": null\n                    }\n                }\n            ],\n            \"user\": {\n                \"id\": 1,\n                \"email\": \"test@mail.com\",\n                \"password\": \"$2a$10$E.xPGoJ31qVc5ZQ.X8twO.mnvXoDHIAUPX8vPqvnQM3vt9IM.OkQ.\",\n                \"name\": \"Test\",\n                \"lastLoginAt\": \"2023-02-19T04:48:02.709Z\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QG1haWwuY29tIiwiaWF0IjoxNjc2NzA2OTk5LCJleHAiOjE3MDgyNDI5OTl9.9WRDBDdvs_P4kv3Pcjl92BZi-7Jn7m36p99Bz7AeBOo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"todo-1 update\",\r\n    \"description\": \"description 1\",\r\n    \"completed\": true,\r\n    \"userId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/todo/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"todo",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"todo-1 update\",\r\n    \"description\": \"description 1\",\r\n    \"completed\": true,\r\n    \"userId\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/todo/1",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"todo",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "281"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"119-+iNfgk7+g+wFcp01vzG9LwNAd9k\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 18 Feb 2023 08:38:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"status\": \"success\",\n    \"message\": \"Todo updated successfully\",\n    \"data\": {\n        \"id\": 1,\n        \"title\": \"todo-1 update\",\n        \"description\": \"description 1\",\n        \"completed\": true,\n        \"due_time\": null,\n        \"userId\": 1,\n        \"created_at\": \"2023-02-18T08:14:11.157Z\",\n        \"updated_at\": \"2023-02-18T08:38:04.075Z\",\n        \"deleted_at\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QG1haWwuY29tIiwiaWF0IjoxNjc2NzA2OTk5LCJleHAiOjE3MDgyNDI5OTl9.9WRDBDdvs_P4kv3Pcjl92BZi-7Jn7m36p99Bz7AeBOo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/todo/delete/5",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"todo",
+								"delete",
+								"5"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/todo/delete/5",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"todo",
+										"delete",
+										"5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "274"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"112-Cy23cIxWTOYmg9Fml81e1P3SRCw\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 18 Feb 2023 08:49:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"status\": \"success\",\n    \"message\": \"Todo deleted successfully\",\n    \"data\": {\n        \"title\": \"todo-1 delete\",\n        \"description\": \"description 1\",\n        \"completed\": true,\n        \"due_time\": null,\n        \"userId\": 1,\n        \"created_at\": \"2023-02-18T08:40:43.933Z\",\n        \"updated_at\": \"2023-02-18T08:40:43.933Z\",\n        \"deleted_at\": null\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Tag",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QG1haWwuY29tIiwiaWF0IjoxNjc2NzA2OTk5LCJleHAiOjE3MDgyNDI5OTl9.9WRDBDdvs_P4kv3Pcjl92BZi-7Jn7m36p99Bz7AeBOo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"tugas\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/tags",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tags"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"tugas\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/tags",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"tags"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "78"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4e-clyd5zSckvEpXa0awyzLPUN7XIo\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 18 Feb 2023 09:28:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"status\": \"success\",\n    \"message\": \"Tag created successfully\",\n    \"data\": {}\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "TodoTag",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QG1haWwuY29tIiwiaWF0IjoxNjc2NzA2OTk5LCJleHAiOjE3MDgyNDI5OTl9.9WRDBDdvs_P4kv3Pcjl92BZi-7Jn7m36p99Bz7AeBOo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"todoId\": 1,\r\n    \"tagId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/todotag/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"todotag",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"todoId\": 1,\r\n    \"tagId\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/todotag/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"todotag",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "82"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"52-vjs5O5PVTHwrFO+ZF/FfW0zixMA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 18 Feb 2023 09:42:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"status\": \"success\",\n    \"message\": \"TodoTag created Successfully\",\n    \"data\": {}\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
